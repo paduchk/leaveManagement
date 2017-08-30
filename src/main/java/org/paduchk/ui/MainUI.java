@@ -1,13 +1,11 @@
 package org.paduchk.ui;
 
-
-
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewDisplay;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.spring.annotation.SpringViewDisplay;
-import com.vaadin.ui.Calendar;
+
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
@@ -15,6 +13,7 @@ import com.vaadin.ui.VerticalLayout;
 
 @SpringUI
 @SpringViewDisplay
+
 public class MainUI extends UI implements ViewDisplay {
 
 	/**
@@ -33,11 +32,8 @@ public class MainUI extends UI implements ViewDisplay {
 		// TODO Auto-generated method stub
 		VerticalLayout mainLayout = new VerticalLayout();
 		Label title = new Label("Leave Managenent");
-		Calendar cal = new Calendar();
 		mainLayout.addComponent(title);
-		mainLayout.addComponent(cal);
 		setContent(mainLayout);
-
 	}
 
 }
