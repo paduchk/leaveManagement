@@ -2,7 +2,7 @@ package org.paduchk.application;
 
 import javax.annotation.PostConstruct;
 
-import org.paduchk.domain.Employee;
+import org.paduchk.domain.employee.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

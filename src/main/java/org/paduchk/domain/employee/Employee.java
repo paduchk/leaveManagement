@@ -1,4 +1,4 @@
-package org.paduchk.domain;
+package org.paduchk.domain.employee;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
