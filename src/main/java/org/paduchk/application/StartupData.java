@@ -17,8 +17,10 @@ public class StartupData {
 		
 		Employee emp1 = new Employee(1L, "Jan", "Nowak", "jan@nowak.pl", true);
 		Employee emp2 = new Employee(2L, "John", "Rambo", "john@rambo.org" , true);
+		Employee emp3 = new Employee(3L, "Janina", "Nowak", "john@rambo.org" , false);
 		
 		employeeService.saveEmployee(emp1);
 		employeeService.saveEmployee(emp2);
+		employeeService.saveEmployee(emp3);
 	}
 }
