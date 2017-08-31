@@ -25,4 +25,7 @@ public class Employee {
 		this.acitve = acitve;
 	}
 
+	public Employee() {
+		super();
+	}
 }
