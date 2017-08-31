@@ -24,4 +24,14 @@ public class DueLeave {
 	public DueLeave() {
 	}
 
+	public DueLeave(Long id, Long amount, Date year, Employee employee) {
+		super();
+		this.id = id;
+		this.amount = amount;
+		this.year = year;
+		this.employee = employee;
+	}
+	
+	
+
 }

@@ -1,7 +1,7 @@
 package org.paduchk.application;
 
-import org.paduchk.domain.EmployeeRepository;
 import org.paduchk.domain.employee.Employee;
+import org.paduchk.domain.employee.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

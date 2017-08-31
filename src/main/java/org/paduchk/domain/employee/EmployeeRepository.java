@@ -1,6 +1,5 @@
-package org.paduchk.domain;
+package org.paduchk.domain.employee;
 
-import org.paduchk.domain.employee.Employee;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface EmployeeRepository extends PagingAndSortingRepository<Employee, Long> {
