@@ -4,7 +4,9 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import org.paduchk.domain.leave.ConsumedLeave;
 import org.paduchk.domain.leave.DueLeave;
@@ -25,6 +27,13 @@ public class Employee {
 //	List<DueLeave> dueLeaves;
 //	@OneToMany(mappedBy="employee")
 //	List<ConsumedLeave> consumedLeaves;
+	@OneToOne
+	@JoinColumn(name="ID")
+	EmployeeType employeeType;
+//	@OneToOne
+//	@JoinColumn(name="ID")
+//	LoginAccount loginAccount;
+	
 	
 	public Employee(Long id, String firstName, String lastName, String email, Boolean acitve) {
 		super();
