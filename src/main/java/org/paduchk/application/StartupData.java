@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import javax.annotation.PostConstruct;
 
 import org.paduchk.domain.employee.Employee;
+import org.paduchk.domain.leave.ConsumedLeave;
 import org.paduchk.domain.leave.DueLeave;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -17,7 +18,9 @@ public class StartupData {
 	
 	@Autowired
 	DueLeaveService dueLeaveService;
-
+	
+	@Autowired
+	ConsumedLeaveService consumedLeaveService;
 	
 	@PostConstruct
 	public void init() {
@@ -35,5 +38,16 @@ public class StartupData {
 		dueLeaveService.saveDueLeave(emp1DueLeve);
 		dueLeaveService.saveDueLeave(emp2DueLeve);
 		dueLeaveService.saveDueLeave(emp3DueLeve);
+		
+		ConsumedLeave emp1ConsLeave1 = new ConsumedLeave(1L, LocalDate.of(2017, 02, 01), emp1);
+		ConsumedLeave emp1ConsLeave2 = new ConsumedLeave(2L, LocalDate.of(2017, 02, 02), emp1);
+		ConsumedLeave emp1ConsLeave3 = new ConsumedLeave(3L, LocalDate.of(2017, 02, 03), emp1);
+		consumedLeaveService.saveConsumedLeave(emp1ConsLeave1);
+		consumedLeaveService.saveConsumedLeave(emp1ConsLeave2);
+		consumedLeaveService.saveConsumedLeave(emp1ConsLeave3);
+		
+		
+		
+		
 	}
 }

@@ -24,4 +24,11 @@ public class ConsumedLeave {
 		
 	}
 
+	public ConsumedLeave(Long id, LocalDate date, Employee employee) {
+		super();
+		this.id = id;
+		this.date = date;
+		this.employee = employee;
+	}
+
 }
