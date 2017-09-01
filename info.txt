@@ -1,0 +1,2 @@
+about dealing with Date and LocaDate:
+https://www.thoughts-on-java.org/persist-localdate-localdatetime-jpa/

@@ -1,6 +1,6 @@
 package org.paduchk.application;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.annotation.PostConstruct;
 
@@ -29,12 +29,11 @@ public class StartupData {
 		employeeService.saveEmployee(emp2);
 		employeeService.saveEmployee(emp3);
 		
-		DueLeave emp1DueLeve = new DueLeave(1L, 26L, new Date(2017,1,1), emp1);
-		DueLeave emp2DueLeve = new DueLeave(2L, 26L, new Date(2017,1,1), emp2);
-		DueLeave emp3DueLeve = new DueLeave(3L, 26L, new Date(2017,1,1), emp3);
+		DueLeave emp1DueLeve = new DueLeave(1L, 26L, LocalDate.of(2017,1,1), emp1);
+		DueLeave emp2DueLeve = new DueLeave(2L, 26L, LocalDate.of(2017,1,1), emp2);
+		DueLeave emp3DueLeve = new DueLeave(3L, 26L, LocalDate.of(2017,1,1), emp3);
 		dueLeaveService.saveDueLeave(emp1DueLeve);
 		dueLeaveService.saveDueLeave(emp2DueLeve);
 		dueLeaveService.saveDueLeave(emp3DueLeve);
-
 	}
 }

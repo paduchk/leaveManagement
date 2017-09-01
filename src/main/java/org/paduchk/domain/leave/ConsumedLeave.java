@@ -1,6 +1,6 @@
 package org.paduchk.domain.leave;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -16,7 +16,7 @@ public class ConsumedLeave {
 	
 	@Id
 	Long id;
-	Date date;
+	LocalDate date;
 	@ManyToOne
 	Employee employee;
 	

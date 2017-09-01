@@ -1,5 +1,6 @@
 package org.paduchk.domain.leave;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -17,14 +18,14 @@ public class DueLeave {
 	@Id
 	Long id;
 	Long amount;
-	Date year;
+	LocalDate year;
 	@ManyToOne
 	Employee employee;
 
 	public DueLeave() {
 	}
 
-	public DueLeave(Long id, Long amount, Date year, Employee employee) {
+	public DueLeave(Long id, Long amount, LocalDate year, Employee employee) {
 		super();
 		this.id = id;
 		this.amount = amount;
