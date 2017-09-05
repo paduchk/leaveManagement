@@ -29,9 +29,9 @@ public class StartupData {
 	@PostConstruct
 	public void init() {
 		
-		Employee emp1 = new Employee(1L, "Jan", "Nowak", "jan@nowak.pl", true);
-		Employee emp2 = new Employee(2L, "John", "Rambo", "john@rambo.org" , true);
-		Employee emp3 = new Employee(3L, "Janina", "Nowak", "john@rambo.org" , false);
+		Employee emp1 = new Employee("Jan", "Nowak", "jan@nowak.pl", true);
+		Employee emp2 = new Employee("John", "Rambo", "john@rambo.org" , true);
+		Employee emp3 = new Employee("Janina", "Nowak", "john@rambo.org" , false);
 		
 		EmployeeType employeeType1 = new EmployeeType(1L,"admin");
 		EmployeeType employeeType2 = new EmployeeType(2L,"user");
@@ -47,16 +47,16 @@ public class StartupData {
 		employeeService.saveEmployee(emp2);
 		employeeService.saveEmployee(emp3);
 		
-		DueLeave emp1DueLeve = new DueLeave(1L, 26L, LocalDate.of(2017,1,1), emp1);
-		DueLeave emp2DueLeve = new DueLeave(2L, 26L, LocalDate.of(2017,1,1), emp2);
-		DueLeave emp3DueLeve = new DueLeave(3L, 26L, LocalDate.of(2017,1,1), emp3);
+		DueLeave emp1DueLeve = new DueLeave( 26L, LocalDate.of(2017,1,1), emp1);
+		DueLeave emp2DueLeve = new DueLeave( 26L, LocalDate.of(2017,1,1), emp2);
+		DueLeave emp3DueLeve = new DueLeave( 26L, LocalDate.of(2017,1,1), emp3);
 		dueLeaveService.saveDueLeave(emp1DueLeve);
 		dueLeaveService.saveDueLeave(emp2DueLeve);
 		dueLeaveService.saveDueLeave(emp3DueLeve);
 		
-		ConsumedLeave emp1ConsLeave1 = new ConsumedLeave(1L, LocalDate.of(2017, 02, 01), emp1);
-		ConsumedLeave emp1ConsLeave2 = new ConsumedLeave(2L, LocalDate.of(2017, 02, 02), emp1);
-		ConsumedLeave emp1ConsLeave3 = new ConsumedLeave(3L, LocalDate.of(2017, 02, 03), emp1);
+		ConsumedLeave emp1ConsLeave1 = new ConsumedLeave(LocalDate.of(2017, 02, 01), emp1);
+		ConsumedLeave emp1ConsLeave2 = new ConsumedLeave(LocalDate.of(2017, 02, 02), emp1);
+		ConsumedLeave emp1ConsLeave3 = new ConsumedLeave(LocalDate.of(2017, 02, 03), emp1);
 		consumedLeaveService.saveConsumedLeave(emp1ConsLeave1);
 		consumedLeaveService.saveConsumedLeave(emp1ConsLeave2);
 		consumedLeaveService.saveConsumedLeave(emp1ConsLeave3);

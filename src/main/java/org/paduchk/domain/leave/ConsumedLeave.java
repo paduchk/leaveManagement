@@ -3,6 +3,7 @@ package org.paduchk.domain.leave;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -15,6 +16,7 @@ import lombok.Data;
 public class ConsumedLeave {
 	
 	@Id
+	@GeneratedValue
 	Long id;
 	LocalDate date;
 	@ManyToOne
@@ -24,9 +26,8 @@ public class ConsumedLeave {
 		
 	}
 
-	public ConsumedLeave(Long id, LocalDate date, Employee employee) {
+	public ConsumedLeave(LocalDate date, Employee employee) {
 		super();
-		this.id = id;
 		this.date = date;
 		this.employee = employee;
 	}

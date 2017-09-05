@@ -14,4 +14,6 @@ public class DueLeaveService {
 	void saveDueLeave(DueLeave dueLeave) {
 		dueLeaveRepository.save(dueLeave);
 	}
+	
+	//void grantDueLeve()
 }

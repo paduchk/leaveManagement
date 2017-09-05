@@ -14,4 +14,8 @@ public class EmployeeService {
 	void saveEmployee(Employee employee) {
 		employeeRepository.save(employee);
 	}
+	
+	void grantDueLeave(Employee employee) {
+		return;
+	}
 }

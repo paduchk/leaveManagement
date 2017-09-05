@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -16,6 +17,7 @@ import lombok.Data;
 public class DueLeave {
 
 	@Id
+	@GeneratedValue
 	Long id;
 	Long amount;
 	LocalDate year;
@@ -25,9 +27,8 @@ public class DueLeave {
 	public DueLeave() {
 	}
 
-	public DueLeave(Long id, Long amount, LocalDate year, Employee employee) {
+	public DueLeave( Long amount, LocalDate year, Employee employee) {
 		super();
-		this.id = id;
 		this.amount = amount;
 		this.year = year;
 		this.employee = employee;

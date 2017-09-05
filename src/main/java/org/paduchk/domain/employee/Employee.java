@@ -3,6 +3,7 @@ package org.paduchk.domain.employee;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -20,6 +21,7 @@ import lombok.Data;
 public class Employee {
 	
 	@Id
+	@GeneratedValue
 	Long id;
 	String firstName;
 	String lastName;
@@ -36,9 +38,8 @@ public class Employee {
 //	LoginAccount loginAccount;
 	
 	
-	public Employee(Long id, String firstName, String lastName, String email, Boolean acitve) {
+	public Employee(String firstName, String lastName, String email, Boolean acitve) {
 		super();
-		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
