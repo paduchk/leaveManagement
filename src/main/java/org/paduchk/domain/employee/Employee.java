@@ -5,9 +5,11 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import org.hibernate.annotations.ManyToAny;
 import org.paduchk.domain.leave.ConsumedLeave;
 import org.paduchk.domain.leave.DueLeave;
 
@@ -27,8 +29,7 @@ public class Employee {
 //	List<DueLeave> dueLeaves;
 //	@OneToMany(mappedBy="employee")
 //	List<ConsumedLeave> consumedLeaves;
-	@OneToOne
-	@JoinColumn(name="ID")
+	@ManyToOne
 	EmployeeType employeeType;
 //	@OneToOne
 //	@JoinColumn(name="ID")

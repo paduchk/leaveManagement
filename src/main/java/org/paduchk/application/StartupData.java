@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import javax.annotation.PostConstruct;
 
 import org.paduchk.domain.employee.Employee;
+import org.paduchk.domain.employee.EmployeeType;
 import org.paduchk.domain.leave.ConsumedLeave;
 import org.paduchk.domain.leave.DueLeave;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,9 @@ public class StartupData {
 	
 	@Autowired
 	EmployeeService employeeService;
+	
+	@Autowired
+	EmployeeTypeService employeeTypeService;
 	
 	@Autowired
 	DueLeaveService dueLeaveService;
@@ -28,6 +32,17 @@ public class StartupData {
 		Employee emp1 = new Employee(1L, "Jan", "Nowak", "jan@nowak.pl", true);
 		Employee emp2 = new Employee(2L, "John", "Rambo", "john@rambo.org" , true);
 		Employee emp3 = new Employee(3L, "Janina", "Nowak", "john@rambo.org" , false);
+		
+		EmployeeType employeeType1 = new EmployeeType(1L,"admin");
+		EmployeeType employeeType2 = new EmployeeType(2L,"user");
+		employeeTypeService.saveEmployeeType(employeeType1);
+		employeeTypeService.saveEmployeeType(employeeType2);
+		
+		
+		emp1.setEmployeeType(employeeType1);
+		emp2.setEmployeeType(employeeType2);
+		emp3.setEmployeeType(employeeType2);
+		
 		employeeService.saveEmployee(emp1);
 		employeeService.saveEmployee(emp2);
 		employeeService.saveEmployee(emp3);
@@ -45,6 +60,12 @@ public class StartupData {
 		consumedLeaveService.saveConsumedLeave(emp1ConsLeave1);
 		consumedLeaveService.saveConsumedLeave(emp1ConsLeave2);
 		consumedLeaveService.saveConsumedLeave(emp1ConsLeave3);
+		
+
+		
+		
+		
+		
 		
 		
 		

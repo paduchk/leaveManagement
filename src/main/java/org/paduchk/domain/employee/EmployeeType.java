@@ -13,4 +13,17 @@ public class EmployeeType {
 	Long id;
 	String name;
 	
+	public EmployeeType(Long id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	
+	public EmployeeType() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
 }
