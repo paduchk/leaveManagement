@@ -21,7 +21,7 @@ public class StartupData {
 	EmployeeTypeService employeeTypeService;
 	
 	@Autowired
-	DueLeaveService dueLeaveService;
+	LeaveService dueLeaveService;
 	
 	@Autowired
 	ConsumedLeaveService consumedLeaveService;
@@ -46,6 +46,8 @@ public class StartupData {
 		employeeService.saveEmployee(emp1);
 		employeeService.saveEmployee(emp2);
 		employeeService.saveEmployee(emp3);
+		emp1.setEmail("jan@nowak.org");
+		employeeService.saveEmployee(emp1);
 		
 		DueLeave emp1DueLeve = new DueLeave( 26L, LocalDate.of(2017,1,1), emp1);
 		DueLeave emp2DueLeve = new DueLeave( 26L, LocalDate.of(2017,1,1), emp2);
