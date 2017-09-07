@@ -21,10 +21,7 @@ public class StartupData {
 	EmployeeTypeService employeeTypeService;
 	
 	@Autowired
-	LeaveService dueLeaveService;
-	
-	@Autowired
-	ConsumedLeaveService consumedLeaveService;
+	LeaveService leaveService;
 	
 	@PostConstruct
 	public void init() {
@@ -52,16 +49,16 @@ public class StartupData {
 		DueLeave emp1DueLeve = new DueLeave( 26L, LocalDate.of(2017,1,1), emp1);
 		DueLeave emp2DueLeve = new DueLeave( 26L, LocalDate.of(2017,1,1), emp2);
 		DueLeave emp3DueLeve = new DueLeave( 26L, LocalDate.of(2017,1,1), emp3);
-		dueLeaveService.saveDueLeave(emp1DueLeve);
-		dueLeaveService.saveDueLeave(emp2DueLeve);
-		dueLeaveService.saveDueLeave(emp3DueLeve);
+		leaveService.saveDueLeave(emp1DueLeve);
+		leaveService.saveDueLeave(emp2DueLeve);
+		leaveService.saveDueLeave(emp3DueLeve);
 		
 		ConsumedLeave emp1ConsLeave1 = new ConsumedLeave(LocalDate.of(2017, 02, 01), emp1);
 		ConsumedLeave emp1ConsLeave2 = new ConsumedLeave(LocalDate.of(2017, 02, 02), emp1);
 		ConsumedLeave emp1ConsLeave3 = new ConsumedLeave(LocalDate.of(2017, 02, 03), emp1);
-		consumedLeaveService.saveConsumedLeave(emp1ConsLeave1);
-		consumedLeaveService.saveConsumedLeave(emp1ConsLeave2);
-		consumedLeaveService.saveConsumedLeave(emp1ConsLeave3);
+		leaveService.saveConsumedLeave(emp1ConsLeave1);
+		leaveService.saveConsumedLeave(emp1ConsLeave2);
+		leaveService.saveConsumedLeave(emp1ConsLeave3);
 		
 
 		
