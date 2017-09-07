@@ -1,5 +1,8 @@
 package org.paduchk.application;
 
+import java.util.List;
+
+import org.paduchk.domain.employee.Employee;
 import org.paduchk.domain.leave.ConsumedLeave;
 import org.paduchk.domain.leave.ConsumedLeaveRepository;
 import org.paduchk.domain.leave.DueLeave;
@@ -24,5 +27,22 @@ public class LeaveService {
 		consumedLeaveRepository.save(consumedLeave);
 	}	
 	
+	void saveConsumedLeaves(List<ConsumedLeave> consumedLeaves) {
+		for(ConsumedLeave leave:consumedLeaves ) {
+			consumedLeaveRepository.save(leave);
+		}
+		return;
+	}
 
+	List<ConsumedLeave> getEmployeeConsumedLeaves(Employee employee) {
+		return consumedLeaveRepository.findByEmployee(employee);
+	}
+	
+	int getEmployeeConsumedLeavesCount(Employee employee) {
+		return getEmployeeConsumedLeaves(employee).size();
+	}
+	
+	int getEmployeeDueLeaveCount(Employee employee) {
+		return 0;
+	}
 }

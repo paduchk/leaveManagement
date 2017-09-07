@@ -1,6 +1,7 @@
 package org.paduchk.application;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.annotation.PostConstruct;
 
@@ -60,14 +61,9 @@ public class StartupData {
 		leaveService.saveConsumedLeave(emp1ConsLeave2);
 		leaveService.saveConsumedLeave(emp1ConsLeave3);
 		
-
+		List<ConsumedLeave> leaves = leaveService.getEmployeeConsumedLeaves(emp1);
 		
-		
-		
-		
-		
-		
-		
+		System.out.println(leaves.size());
 		
 	}
 }
