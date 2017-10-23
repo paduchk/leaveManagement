@@ -1,5 +1,6 @@
 package org.paduchk.application;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.paduchk.domain.employee.Employee;
@@ -42,7 +43,8 @@ public class LeaveService {
 		return getEmployeeConsumedLeaves(employee).size();
 	}
 	
-	int getEmployeeDueLeaveCount(Employee employee) {
-		return 0;
+	int getEmployeeDueLeaveCount(Employee employee, LocalDate year) {
+		DueLeave dueLeave =  dueLeaveRepository.findByEmployeeAndYear(employee, year);
+		return dueLeave.getAmount().intValue();
 	}
 }
