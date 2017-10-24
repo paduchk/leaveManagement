@@ -1,5 +1,8 @@
 package org.paduchk.ui;
 
+import org.paduchk.ui.view.EmployeeDetailsView;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.vaadin.navigator.Navigator;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewDisplay;
@@ -11,37 +14,34 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
-
 @SpringUI
-@SpringViewDisplay
-public class MainUI extends UI implements ViewDisplay {
+public class MainUI extends UI {
 
-	Navigator navigator;
-	/**
-	 * 
-	 */
+	Navigator uiNavigator;
+	MainLayout mainLayout;
+
 	private static final long serialVersionUID = 1L;
-
 	
-	public MainUI(Navigator navigator) {
-		this.navigator = navigator;
+	@Autowired
+	public MainUI(Navigator uiNavigator, MainLayout mainLayout) {
+		this.uiNavigator = uiNavigator;
+		this.mainLayout = mainLayout;
 	}
 	
-	@Override
-	public void showView(View view) {
-		// TODO Auto-generated method stub
-		
-
-	}
-
 	@Override
 	protected void init(VaadinRequest request) {
 		// TODO Auto-generated method stub
-		VerticalLayout mainLayout = new VerticalLayout();
-		Label title = new Label("Leave Managenent");
-		mainLayout.addComponent(title);
-		setContent(mainLayout);
-		navigator.navigateTo("employee");
-	}
 
+		Label title = new Label("Leave Managenent");
+		Label title1 = new Label("Leave Managenent1");
+/*
+		mainLayout.addComponent(title);
+		mainLayout.addComponent(title1);
+		mainLayout.addComponent(title);
+		mainLayout.addComponent(title);
+*/
+		
+		setContent(mainLayout);
+;
+	}
 }
