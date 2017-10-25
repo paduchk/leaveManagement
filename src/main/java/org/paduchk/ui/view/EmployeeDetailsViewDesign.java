@@ -10,7 +10,7 @@ public class EmployeeDetailsViewDesign extends VerticalLayout {
 	String firstName;
 	String lastName;
 	String email;
-	ComboBox<Boolean> acitve;
+	ComboBox<Boolean> active;
 	ComboBox<String> employeeType;
 	public EmployeeDetailsViewDesign() {
 		Design.read(this);
