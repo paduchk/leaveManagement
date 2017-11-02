@@ -1,0 +1,27 @@
+<v-verticail-layout width-full>
+	<v-grid _id="employeesList" data-item-type="org.paduchk.domain.employee.Employee"  width-full>
+		<table>
+			<colgroup>
+				<col column-id="firstName" sortable>
+				<col column-id="lastName" sortable>
+				<col column-id="email" sortable>
+				<col column-id="active" sortable>
+				<col column-id="employeeType" sortable>
+			</colgroup>
+			<thead>
+			<tr default>
+				<th plain-text column-ids="firstName">Imię</th>
+				<th plain-text column-ids="lastName">Nazwisko</th>
+				<th plain-text column-ids="email">E-mail</th>
+				<th plain-text column-ids="active">Aktywny</th>
+				<th plain-text column-ids="employeeType">Typ pracownika</th>
+			</tr>
+			</thead>
+		</table>
+	</v-grid>
+	<v-horizontal-layout>
+		<v-button _id="addButton">Dodaj</v-button>
+		<v-button _id="editButton">Edytuj</v-button>
+		<v-button _id="removeButton" >Usuń</v-button>
+	</v-horizontal-layout>
+</v-verticail-layout>

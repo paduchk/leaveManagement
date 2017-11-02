@@ -1,6 +1,7 @@
 package org.paduchk.ui;
 
 import org.paduchk.ui.view.EmployeeDetailsView;
+import org.paduchk.ui.view.EmployeesListView;
 
 import com.vaadin.navigator.Navigator;
 import com.vaadin.navigator.View;
@@ -32,7 +33,8 @@ public class MainUI extends UI implements ViewDisplay {
 		// TODO Auto-generated method stub
 		mainLayout = new MainLayout();
 		setContent(mainLayout);
-		navigator.navigateTo(EmployeeDetailsView.VIEW_NAME);
+		//navigator.navigateTo(EmployeeDetailsView.VIEW_NAME);
+		navigator.navigateTo(EmployeesListView.VIEW_NAME);
 	}
 
 	@Override

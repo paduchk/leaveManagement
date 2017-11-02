@@ -1,0 +1,22 @@
+        <vaadin-grid width-full data-item-type="org.paduchk.domain.branch.Branch">
+            <table>
+                <colgroup>
+                    <col column-id="name" sortable>
+                    <col column-id="regionName" sortable>
+                    <col column-id="parentBranchName" sortable>
+                    <col column-id="branchType" sortable>
+                    <col column-id="city" sortable>
+                    <col column-id="country" sortable>
+                </colgroup>
+                <thead>
+                    <tr default>
+                        <th plain-text column-ids="country">Kraj</th>
+                        <th plain-text column-ids="city">Miasto</th>
+                        <th plain-text column-ids="name">Nazwa</th>
+                        <th plain-text column-ids="branchType">Typ Oddziału</th>
+                        <th plain-text column-ids="parentBranchName">O. Nadrzędny</th>
+                        <th plain-text column-ids="regionName">Region</th>
+                    </tr>
+                </thead>
+            </table>
+        </vaadin-grid>
