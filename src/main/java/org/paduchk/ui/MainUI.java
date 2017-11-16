@@ -2,6 +2,7 @@ package org.paduchk.ui;
 
 import org.paduchk.ui.view.EmployeeDetailsView;
 import org.paduchk.ui.view.EmployeesListView;
+import org.paduchk.ui.view.test;
 
 import com.vaadin.navigator.Navigator;
 import com.vaadin.navigator.View;

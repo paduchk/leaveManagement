@@ -4,6 +4,7 @@ import org.paduchk.domain.employee.Employee;
 import org.paduchk.domain.employee.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.vaadin.data.ValueProvider;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.spring.annotation.SpringView;
@@ -17,6 +18,27 @@ public class EmployeesListView extends EmployeesListViewDesign implements View {
 	
 	@Autowired
 	EmployeeRepository employeeRepository;
+	
+	public EmployeesListView() {
+		// TODO Auto-generated constructor stub
+		//employeesList.setSizeFull();
+		//this.setExpandRatio(employeesList, 1);
+		//this.setSizeFull();
+		//this.setWidth("100%");
+		
+		//changing existing column valueprovider
+		String colName = employeesList.getColumn("employeeType").getCaption();
+		employeesList.removeColumn("employeeType");
+		employeesList.addColumn(new ValueProvider<Employee, String>() {
+
+			@Override
+			public String apply(Employee source) {
+				// TODO Auto-generated method stub
+				return source.getEmployeeType().getName();
+			}
+		}).setId("employeeType").setCaption(colName);
+		
+	}
 	
 	@Override
 	public void enter(ViewChangeEvent event) {
