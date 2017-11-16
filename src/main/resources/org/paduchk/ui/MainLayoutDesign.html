@@ -1,8 +1,8 @@
-<v-vertical-layout>
-	<v-panel _id="header"><v-label>header</v-label> </v-panel>
-	<v-horizontal-layout>
-		<v-vertical-layout _id="menu" > <v-label>menu</v-label></v-vertical-layout>
-		<v-vertical-layout _id="content"><v-label>content</v-label> </v-vertical-layout>
+<v-vertical-layout width="100%">
+	<v-panel _id="header" width="100%"><v-label>header</v-label> </v-panel>
+	<v-horizontal-layout width="100%">
+		<v-vertical-layout _id="menu" width="0"></v-vertical-layout>
+		<v-vertical-layout _id="content" :expand top-center></v-vertical-layout>
 	</v-horizontal-layout>
 	<v-panel _id="footer"> <v-label>footer</v-label> </v-panel>	
 </v-vertical-layout>
