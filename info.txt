@@ -1,2 +1,6 @@
 about dealing with Date and LocaDate:
 https://www.thoughts-on-java.org/persist-localdate-localdatetime-jpa/
+
+external propeerties
+http://www.baeldung.com/configuration-properties-in-spring-boot
+https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html
