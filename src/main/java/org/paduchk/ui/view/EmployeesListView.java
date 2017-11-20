@@ -27,6 +27,7 @@ public class EmployeesListView extends EmployeesListViewDesign implements View {
 		//this.setWidth("100%");
 		
 		//changing existing column valueprovider
+/*		
 		String colName = employeesList.getColumn("employeeType").getCaption();
 		employeesList.removeColumn("employeeType");
 		employeesList.addColumn(new ValueProvider<Employee, String>() {
@@ -37,7 +38,7 @@ public class EmployeesListView extends EmployeesListViewDesign implements View {
 				return source.getEmployeeType().getName();
 			}
 		}).setId("employeeType").setCaption(colName);
-		
+*/
 	}
 	
 	@Override

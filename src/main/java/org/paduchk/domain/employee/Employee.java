@@ -26,7 +26,7 @@ public class Employee {
 	String firstName;
 	String lastName;
 	String email;
-	Boolean acitve;
+	Boolean active;
 //	@OneToMany(mappedBy="employee")
 //	List<DueLeave> dueLeaves;
 //	@OneToMany(mappedBy="employee")
@@ -43,7 +43,7 @@ public class Employee {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
-		this.acitve = acitve;
+		this.active = acitve;
 	}
 
 	public Employee() {

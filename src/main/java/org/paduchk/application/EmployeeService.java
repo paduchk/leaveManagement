@@ -26,7 +26,7 @@ public class EmployeeService {
 	}
 	
 	void setEmployeeActive(Employee employee, Boolean active) {
-		employee.setAcitve(active);
+		employee.setActive(active);
 		employeeRepository.save(employee);
 	}
 	
