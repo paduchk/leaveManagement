@@ -2,12 +2,17 @@ package org.paduchk.tools;
 
 import lombok.Data;
 
-@Data
 public class Caption {
 	
 	String caption;
 
-	public Caption() {
-
+	public String getCaption() {
+		return caption;
 	}
+
+	public void setCaption(String caption) {
+		this.caption = caption;
+	}
+
+	
 }

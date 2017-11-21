@@ -2,6 +2,7 @@ package org.paduchk.ui.view;
 
 import org.paduchk.domain.employee.Employee;
 import org.paduchk.domain.employee.EmployeeRepository;
+import org.paduchk.tools.Subtitles;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.vaadin.data.ValueProvider;
@@ -19,26 +20,10 @@ public class EmployeesListView extends EmployeesListViewDesign implements View {
 	@Autowired
 	EmployeeRepository employeeRepository;
 	
-	public EmployeesListView() {
+	@Autowired
+	public EmployeesListView(Subtitles subtitlesProperties) {
 		// TODO Auto-generated constructor stub
-		//employeesList.setSizeFull();
-		//this.setExpandRatio(employeesList, 1);
-		//this.setSizeFull();
-		//this.setWidth("100%");
-		
-		//changing existing column valueprovider
-/*		
-		String colName = employeesList.getColumn("employeeType").getCaption();
-		employeesList.removeColumn("employeeType");
-		employeesList.addColumn(new ValueProvider<Employee, String>() {
-
-			@Override
-			public String apply(Employee source) {
-				// TODO Auto-generated method stub
-				return source.getEmployeeType().getName();
-			}
-		}).setId("employeeType").setCaption(colName);
-*/
+		super(subtitlesProperties);
 	}
 	
 	@Override
